@@ -231,7 +231,7 @@ In order for heroku to work properly, you can't have `node_modules` in your repo
 ## Push Git
 
 - First update your remote repo so you're code is up to date.
-  - `git add -A`
+  - `git add -A ` 
   - `git commit -m "updating code for heroku"`
   - `git push origin master`
 - Now also push to heroku
