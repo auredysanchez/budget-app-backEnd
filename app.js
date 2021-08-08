@@ -1,5 +1,5 @@
 const express = require("express");
-const budgetsController = require("./controllers/budgets");
+const transactionsController = require("./controllers/transactions");
 const cors = require('cors');
 const app = express();
 app.use(express.json()); 
@@ -7,15 +7,15 @@ app.use(cors());
 
 
 
-app.use("/budgets", budgetsController);
+app.use("/transactions", transactionsController);
 
-app.get("/", (req,res) => {
-    res.send("Welcome to my server!!")
-})
+// app.get("/", (req,res) => {
+//     res.send("Welcome to my Budgeting App!!")
+// })
 
 app.get("/", (req, res) => {
   req.body;
-  res.send("Bookmarks App");
+  res.send("Budget App");
 });
 
 app.get("*", (req, res) => {
